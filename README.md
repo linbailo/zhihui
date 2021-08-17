@@ -25,7 +25,7 @@ openId获取↓
 
 复制到微信，随便发送给一个人
 
-第一：打开这个debugmm.qq.com/?forcex5=true
+第一：打开这个http://debugmm.qq.com/?forcex5=true
 
 第二:然后在打开这个链接http://debugx5.qq.com/
 
