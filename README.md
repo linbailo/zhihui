@@ -11,6 +11,10 @@
 # -教程
 自己修改config.yml文件配置，都有注释
 
+百度python安装教程
+
+建议用腾讯云函数
+
 依赖安装↓
 
 pip install -r requirements.txt -t ./
