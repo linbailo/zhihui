@@ -9,7 +9,7 @@
 
 第一次弄，我小白
 # -教程
-自己修改config.yml
+自己修改config.yml文件配置，都有注释
 
 依赖安装↓
 
@@ -53,15 +53,6 @@ openId获取↓
 
 #### ☁打包上腾讯云
 
-😑不推荐您使用腾讯云😑
-
-😑不推荐您使用腾讯云😑
-
-😑不推荐您使用腾讯云😑
-
-之所以不推荐您部署到腾讯云，是因为部署到腾讯云会出现一些其他问题
-
-诸如`418`，`405`等等的返回代码报错，遇到这种情况请记得更换云函数的地域（如何更换请仔细注意，创建的过程会选择它）
 
 1. 在腾讯云[云函数](https://console.cloud.tencent.com/scf/list?rid=1&ns=default)中新建项目
 
@@ -81,7 +72,7 @@ openId获取↓
 
 9. 执行以下代码以安装您的依赖到云函数中
 
-   `pip3 install -r ./src/requirements.txt -t ./ -i https://mirrors.aliyun.com/pypi/simple`
+   `pip3 install -r ./src/requirements.txt -t ./src -i https://mirrors.aliyun.com/pypi/simple`
 
 10. 若您成功安装依赖，那么您的`在线编辑器`大致将如下图所示，左侧增加了一坨文件夹，底部有个黄色的`WARNING`提示
 
