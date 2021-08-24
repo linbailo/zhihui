@@ -1,0 +1,35 @@
+zuozhe: 'QQ：1628708538'
+#支持多个用户签到
+lin:
+  #第一个用户
+  - user:
+        #登录方式（智慧校园账号登录=1 ； openId登录= 2）
+        log: 1
+        #账号
+        username: ''
+        #密码password
+        password: ''
+        # openId自己获取
+        openId: ''
+        # qmsg消息推送：https://qmsg.zendee.cn/ 自己注册获取key
+        qmsg: ''
+        #是否课堂评教(1=是；0=否（不填也不评教）)
+        pjpj: 1
+        #课堂评教内容
+        pingjiaonr: ''
+  #第二个用户
+  - user:
+        #登录方式（智慧校园账号登录=1 ； openId登录= 2）
+        log: 1
+        #账号
+        username: ''
+        #密码
+        password: ''
+        # openId自己获取
+        openId: '' 
+        # qmsg消息推送：https://qmsg.zendee.cn/ 自己注册获取key
+        qmsg: ''
+        #是否课堂评教(1=是；0=否（不填也不评教）)
+        pjpj: 1
+        #课堂评教内容
+        pingjiaonr: ''
