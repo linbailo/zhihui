@@ -15,6 +15,16 @@ class Denlu:
         self.token = None
 
 
+    def opid(self):
+    	datas = {"openId": self.openId}
+    	r = requests.post("http://wap.gxxd.net.cn/business/app/sysUser/autoLoginByOpenId", data=datas).text
+    	data = json.loads(r)
+    	self.mz = data['data']['name']
+    	print(self.mz)
+    	self.token = data['data']['token']
+
+
+
     def zhanghao(self):
     	xc = requests.session()
     	yz = xc.get(f'http://authserver.gxxd.net.cn/authserver/needCaptcha.html?username={self.username}').text
@@ -35,27 +45,20 @@ class Denlu:
     		cvcv = f'http://pc.gxxd.net.cn/business/cas/client/validateLogin/pc?{host}&service=http:%2F%2Fpc.gxxd.net.cn'
     		qwe = xc.get(cvcv).json()
     		self.mz = qwe['data']['name']
-    		print(self.mz)
     		self.token = qwe['data']['token']
-
+    		return f'{self.mz}:登陆成功'
+    	else:
+    		return '登录失败'
     
-
-    def opid(self):
-    	datas = {"openId": self.openId}
-    	r = requests.post("http://wap.gxxd.net.cn/business/app/sysUser/autoLoginByOpenId", data=datas).text
-    	data = json.loads(r)
-    	self.mz = data['data']['name']
-    	print(self.mz)
-    	self.token = data['data']['token']
-
-
 
     # 本地化登陆
     def login(self):
         # 获取登录方式
         if self.log == 1 :
-        	self.zhanghao()
+        	msg = self.zhanghao()
+        	return msg
         elif self.log == 2 :
-        	self.opid()
+        	msg = self.opid()
+        	return msg
         else:
         	print('获取登录方式失败')
