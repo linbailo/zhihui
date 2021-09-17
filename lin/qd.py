@@ -7,6 +7,7 @@ class QD:
     # 初始化本地登录类
     def __init__(self, denlu: Denlu, userInfo):
         self.pingjiaorn = userInfo['pingjiaonr']
+        self.qmsg = userInfo['qmsg']
         self.token = denlu.token
         self.mz = denlu.mz
 
@@ -44,12 +45,12 @@ class QD:
     	print(rojson)
     	if(cg == None):
     		cggg = self.mz + '：' + cgg
-    		sc = f'https://qmsg.zendee.cn/send/{qmsg}?msg={cggg}'
+    		sc = f'https://qmsg.zendee.cn/send/{self.qmsg}?msg={cggg}'
     		requests.get(sc)
     		print(cggg)
     	else:
     		cggg = self.mz + '：' + cg
-    		sc = f'https://qmsg.zendee.cn/send/{qmsg}?msg={cggg}'
+    		sc = f'https://qmsg.zendee.cn/send/{self.qmsg}?msg={cggg}'
     		requests.get(sc)
     		print(cggg)
     	time.sleep(5)
