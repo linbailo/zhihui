@@ -46,11 +46,11 @@ class QD:
     	if(cg == None):
     		cggg = self.mz + '：' + cgg
     		sc = f'https://qmsg.zendee.cn/send/{self.qmsg}?msg={cggg}'
-    		requests.get(sc)
+    		#requests.get(sc)
     		print(cggg)
     	else:
     		cggg = self.mz + '：' + cg
     		sc = f'https://qmsg.zendee.cn/send/{self.qmsg}?msg={cggg}'
-    		requests.get(sc)
+    		#requests.get(sc)
     		print(cggg)
     	time.sleep(5)
